@@ -153,7 +153,7 @@
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
     "start": "node dist/server",
     "heroku-prebuild": "npm install -g gulp",
-    "heroku-postbuild": "gulp build"
+    "heroku-postbuild": "gulp build && gulp serve:dist"
   },
   "private": true
 }
