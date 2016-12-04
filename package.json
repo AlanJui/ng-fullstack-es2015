@@ -151,9 +151,9 @@
   "scripts": {
     "test": "gulp test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start": "node dist/server",
+    "start": "gulp serve:dist",
     "heroku-prebuild": "npm install -g gulp",
-    "heroku-postbuild": "gulp build && gulp serve:dist"
+    "heroku-postbuild": "gulp build"
   },
   "private": true
 }
