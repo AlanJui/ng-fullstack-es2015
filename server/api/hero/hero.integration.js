@@ -80,7 +80,7 @@ describe('Hero API:', function() {
     });
   });
 
-  describe('PUT /api/heroes/:id', function() {
+  describe.skip('PUT /api/heroes/:id', function() {
     var updatedHero;
 
     beforeEach(function(done) {
@@ -129,7 +129,7 @@ describe('Hero API:', function() {
     });
   });
 
-  describe('PATCH /api/heroes/:id', function() {
+  describe.skip('PATCH /api/heroes/:id', function() {
     var patchedHero;
 
     beforeEach(function(done) {
