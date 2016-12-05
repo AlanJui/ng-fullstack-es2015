@@ -6,6 +6,7 @@
 'use strict';
 import Thing from '../api/thing/thing.model';
 import User from '../api/user/user.model';
+import Hero from '../api/hero/hero.model';
 
 Thing.find({}).remove()
   .then(() => {
@@ -56,4 +57,23 @@ User.find({}).remove()
     .then(() => {
       console.log('finished populating users');
     });
+  });
+
+Hero.find({}).remove()
+  .then(() => {
+    Hero.create(
+        {name: 'Mr. Nice', power: 'Super Hot'},
+        {name: 'Narco', power: 'Super Hot'},
+        {name: 'Bombasto', power: 'Really Smart'},
+        {name: 'Celeritas', power: 'Super Flexible'},
+        {name: 'Magneta', power: 'Really Smart'},
+        {name: 'RubberMan', power: 'Super Hot'},
+        {name: 'Dynama', power: 'Really Smart'},
+        {name: 'Dr IQ', power: 'Super Flexible'},
+        {name: 'Magma', power: 'Super Hot'},
+        {name: 'Tornado', power: 'Weather Change'}
+      )
+        .then(() => {
+          console.log('finished populating heroes');
+        });
   });
